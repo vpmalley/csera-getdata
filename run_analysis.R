@@ -70,15 +70,18 @@ avg_activity_subject = list()
 for (colName in names(mean_std_data)) {
   if ((colName != "activity") && (colName != "subject")) {
     avg_activity_subject[[colName]] <- tapply(mean_std_data[, colName], data.frame(mean_std_data$activity, mean_std_data$subject), mean)
-    write.table(avg_activity_subject[[colName]], "avg_activity_subject.txt", row.name = FALSE, append = TRUE)
+    write.table(avg_activity_subject[[colName]], "avg_activity_subject.txt", row.name = TRUE, append = TRUE)
     
   }
 }
 
-# write.table(avg_activity_subject, "avg_activity_subject.txt", row.name = FALSE)
+#write.table(avg_activity_subject, "avg_activity_subject.txt", row.name = FALSE)
 
 }
 
+
+
+    write.tabletapply(mean_std_data[, colName], data.frame(mean_std_data$activity, mean_std_data$subject), mean), "avg_activity_subject.txt", row.name = FALSE)
 
 
 
