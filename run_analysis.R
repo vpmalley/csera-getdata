@@ -75,15 +75,5 @@ for (colName in names(mean_std_data)) {
   }
 }
 
-#write.table(avg_activity_subject, "avg_activity_subject.txt", row.name = FALSE)
-
 }
-
-
-
-    write.tabletapply(mean_std_data[, colName], data.frame(mean_std_data$activity, mean_std_data$subject), mean), "avg_activity_subject.txt", row.name = FALSE)
-
-
-
-
 
